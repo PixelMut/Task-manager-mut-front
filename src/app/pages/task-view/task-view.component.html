@@ -3,35 +3,27 @@
     <div class="sidebar has-background-white">
       <h1 class="title has-text-primary">Lists</h1>
       <div class="list-menu">
-        <a class="list-menu-item is-active">
-          <p>List #1</p>
-        </a>
-        <a class="list-menu-item">
-          <p>List #2</p>
-        </a>
-        <a class="list-menu-item">
-          <p>List #3</p>
+        <a class="list-menu-item" *ngFor="let list of lists" [routerLink]="['/lists',list._id]" routerLinkActive="is-active">
+          <p>{{ list.title }}</p>
         </a>
       </div>
 
-      <button class="button is-primary has-text-white">+ List</button>
+      <button class="button is-primary has-text-white" routerLink="/new-list" >+ List</button>
     </div>
     <div class="task-list-container has-background-light">
       <h1 class="title has-text-primary">Tasks</h1>
 
       <!--Tasks elements-->
-      <div class="task">
-        <p>This is a task</p>
+      <div class="tasks-list">
+        <div class="task" *ngFor="let task of tasks" (click)="onTaskClick(task)" [ngClass]="{ 'completed' : task.completed}">
+          <p>{{ task.title }}</p>
+        </div>
       </div>
-      <div class="task">
-        <p>This is a task</p>
-      </div>
-      <div class="task">
-        <p>This is a task</p>
-      </div>
-      <div class="task complete">
-        <p>This is a task</p>
-      </div>
+
+
+      <button class="circle-add-button button is-primary" routerLink="./new-task">
+        <img  src="../../../assets/plus-icon-2.svg" style="color: white">
+      </button>
 
     </div>
   </div>
