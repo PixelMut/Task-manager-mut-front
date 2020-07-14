@@ -1,0 +1,29 @@
+// this is where magic happens
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Lato:400,700');
+
+// Set your brand colors
+$turquoise: #44ddd1;
+$green: #27D7a1;
+
+$light-green : #45f69e;
+$dark-green : rgb(0, 100, 80);
+$light: #f8f8f8;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$primary: $green;
+$link: $light-green;
+
+$control-border-width : 2px;
+$input-border-color : transparent;
+$input-shadow : none;
+
+html {
+  background : linear-gradient(to right top, $turquoise, $green);
+}
+
+html, body{
+  height : 100%;
+}
