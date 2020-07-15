@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { WebRequestService } from './web-request.service';
+import { AuthService } from './auth.service';
 
-describe('WebRequestService', () => {
-  let service: WebRequestService;
+describe('AuthService', () => {
+  let service: AuthService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(WebRequestService);
+    service = TestBed.inject(AuthService);
   });
 
   it('should be created', () => {

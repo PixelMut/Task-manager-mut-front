@@ -1,6 +1,6 @@
 <div class="centered-content">
   <div class="white-box">
-    <h1 class="title has-text-primary" >Login</h1>
+    <h1 class="title has-text-primary" >Sign Up</h1>
     <div class="field">
       <p class="control has-icons-left has-icons-right">
         <input class="input has-background-light" type="email" placeholder="Email" #mail>
@@ -20,13 +20,13 @@
     </div>
     <div class="field" style="display: flex;justify-content: flex-end">
       <p class="control">
-        <button class="button is-success has-text-white " (click)="onLoginButtonClicked(mail.value, pwd.value)">
-          Login
+        <button class="button is-success has-text-white " (click)="onSignupClicked(mail.value, pwd.value)">
+          Sign Up
         </button>
       </p>
     </div>
 
     <br>
-    <p class="has-text-grey">No account ? <a routerLink="/signup">Sign up </a>now!</p>
+    <p class="has-text-grey">Already an account ? <a routerLink="/login">Login </a>now!</p>
   </div>
 </div>

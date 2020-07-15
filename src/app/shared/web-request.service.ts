@@ -28,4 +28,17 @@ export class WebRequestService {
     return this.http.delete(`${this.ROOT_URL}/${uri}`);
   }
 
+  login(email: string, pwd: string){
+    return this.http.post(`${this.ROOT_URL}/users/login`,{
+      email : email,
+      password : pwd
+    },{observe : 'response'})
+  }
+
+  signup(email: string, pwd: string){
+    return this.http.post(`${this.ROOT_URL}/users`,{
+      email : email,
+      password : pwd
+    },{observe : 'response'})
+  }
 }
